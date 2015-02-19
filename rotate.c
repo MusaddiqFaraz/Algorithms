@@ -1,11 +1,11 @@
 #include<stdio.h>
 int main()
 {
-	int n,k,*a,i,q;
-	a=(int*)malloc(n*sizeof(int));
+	int n,k,a[100],i,q;
+	
 	void rotation(int*,int,int);
 	printf("enter the no of elements,no of rotations and the index\n");
-	scanf("%d%d%d",&n,&k,&q);
+	scanf("%d % d%d",&n,&k,&q);
 	printf("enter the elements\n");
 	for(i=0;i<n;i++)
 	{
@@ -23,7 +23,7 @@ int main()
 }
 void rotation(int a[],int k,int n)
 {
-	int temp;
+	int temp,i;
 	if(k!=0)
 	{
 		temp=a[n-1];
@@ -32,4 +32,5 @@ void rotation(int a[],int k,int n)
 		a[0]=temp;
 		rotation(a,k-1,n);
 	}
+	return;
 }
